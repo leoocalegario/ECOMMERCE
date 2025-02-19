@@ -1,0 +1,42 @@
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+
+          <h3>Log de Auditoria</h3>
+          <div class="direita">
+          </div>
+          <br>
+          <table border="1" class="table table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome do Usuario</th>
+                <th>Data</th>
+                <th>Categoria</th>
+                <th>Metodo</th>
+                <th>Conteudo</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (auditoria of lista; track $index) {
+              <tr>
+                <td>{{auditoria.idLog }}</td>
+                <td>{{ auditoria.nome }}</td>
+                <td>{{ auditoria.timestamp }}</td>
+                <td>{{ auditoria.categoria }}</td>
+                <td>{{ auditoria.metodo }}</td>
+                <td>{{ auditoria.conteudo }}</td>
+                <td class="direita">
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
